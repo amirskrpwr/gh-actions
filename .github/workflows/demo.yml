@@ -28,7 +28,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: website
+          name: dist-files
           path: dist
   deploy:
     needs: build
@@ -39,6 +39,6 @@ jobs:
         with:
           name: dist-files
       - name: Output contents
-        run: ls 
-      - name: Deploy 
+        run: ls
+      - name: Deploy
         run: echo "Deploying website..."
